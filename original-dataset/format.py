@@ -93,7 +93,7 @@ def convert_row(row: list[1 | 0]) -> list[1 | 0]:
   return new_row
 
 def main(filename: str):
-  # We process the dataset from the original format to the 2 columns (text, target)
+  # We process the dataset from the original format to the 3 columns (id, text, target)
   df = load_dataframe("./original-dataset/dataset/" + filename)
   df = pre_process(df)
 
