@@ -125,7 +125,7 @@ def main(filename: str):
       *new_target_column[index]
     ] for index in range(0,int(len(new_target_column)))
   ]
-  new_df = pd.DataFrame(text_and_labels, columns=["ID", "Tweet", *CLASSIFIER_LABELS])
+  new_df = pd.DataFrame(text_and_labels, columns=["ID", "Dialog", *CLASSIFIER_LABELS])
 
   # Save the new dataframe
   save_dataframe(new_df, filename.replace(".json", ".csv"))
