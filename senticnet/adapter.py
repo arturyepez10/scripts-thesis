@@ -18,6 +18,10 @@ class SenticNetAdapter:
     return value
 
   def _parse_emotions_response(self, response: str):
+
+    if "No emotions detected" in response:
+      return []
+
     x = re.findall(self.regex_expression, response)
 
     # extract the words and strip whitespaces
